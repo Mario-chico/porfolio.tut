@@ -1,10 +1,10 @@
 ---
-import ExperiencieItem from './ExperiencieItem.astro';
-const EXPERIENCIE = [
+import ExperiencieItem from './ExperienceItem.astro';
+const EXPERIENCE = [
   {
-    date: 'February 2022',
-    title: 'Application UI code in Tailwind CSS',
-    description: 'Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.',
+    date: 'Actualmente...',
+    title: 'Junior Security Engineer',
+    description: 'Creación de conectores en Sailpoint para la governanza de accesos, haciendo de Beanshell en diversos tipos (JDBC, Web Service, Delimited File). ',
   },
   {
     date: 'March 2022',
@@ -19,15 +19,14 @@ const EXPERIENCIE = [
 ]
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700">
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
   {
-    EXPERIENCIE.map((experiencie) => (
+    EXPERIENCE.map((experience) => (
     <li class="mb-10 ms-4">
-      <ExperiencieItem {...experiencie}/>
+      <ExperiencieItem {...experience}/>
     </li>
     ))
   }           
   
 
 </ol>
-
