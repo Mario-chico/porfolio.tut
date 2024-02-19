@@ -1,9 +1,40 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+import Linkedin from '../components/icons/Linkedin.astro';
+import SocialContact from '../components/SocialContact.astro';
+import Github from '../components/icons/Github.astro';
+import Experience from '../components/Experience.astro'
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
+		<section class="w-full mx-auto py-44 lg:w-[740px]">
+			
+			<h1 class="text-5xl font-bold flex flex-row pb-10">quepa sopa drinos, soy Mario Chico✌🏿
+				<a 
+					href="https://www.linkedin.com/mariochico" 
+					target="_blank" 
+					rel="noopener" 
+					class="flex items-center justify-center">
+					<Badge >Puesto pa los madrazos </Badge>
+				</a>
+			</h1>
+			<h2 class="text-2xl text-wrap opacity-75">+4 años de experiencia. Desarrollador Web y Calistenico. De Villahermosa, México. Especializado en frontlever y en andar bien pinche activo para lo que se ofrezca</h2>
+			<nav class="flex gap-x-3 mt-7">
+				<SocialContact href="https://www.linkedin.com">
+					<Linkedin class="w-6 h-6" />
+					Linkedin
+				</SocialContact>
+				<SocialContact href="https://github.com">
+					<Github class="w-6 h-6"/>
+					Github
+				</SocialContact>
+			</nav>
+		</section>
+		<section>                 
+			<Experience />
+		</section>
 	</main>
 </Layout>
 
