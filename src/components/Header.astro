@@ -1,11 +1,12 @@
-<header class="hidden sm:flex justify-center items-center pt-4 pb-10 lg:pb-24 w-full lg:w-[720px] lg:mx-auto ">
+---
+import Hamburger from './Hamburger.astro';
+import Navigation from './Navigation.astro';
+---
+<header class=" sm:flex sm:justify-center sm:items-center pt-4  lg:pb-24 w-full lg:w-[720px] lg:mx-auto ">
   
-  <nav class="flex gap-x-3 lg:gap-x-10">
-    <a href="#top">Inicio</a>
-    <a href="#experiencia">Experiencia</a>
-    <a href="#proyectos">Proyectos</a>
-    <a class="alert" href="#sobre-mi">Acerca de mi</a>
-    <a class="alert" href="#contacto">Contacto</a>
+  <nav class="flex flex-col gap-x-3 lg:gap-x-10 ">
+    <Hamburger />
+    <Navigation />
   </nav>
 </header>
 
@@ -20,5 +21,5 @@
     button.addEventListener('click', () => {
       alert('Luego lo programo');
     });
-  });
+  });  
 </script>
