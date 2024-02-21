@@ -8,44 +8,51 @@ import Github from '../components/icons/Github.astro';
 import Briefcase from '../components/icons/Briefcase.astro';
 import Experience from '../components/Experience.astro';
 import SectionContainer from '../components/SectionContainer.astro';
+import Projects from '../components/Projects.astro';
 
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<SectionContainer class="py-5" >
-			<Image class="rounded-full mx-auto lg:mx-0" width="48" height="48" src="https://media.licdn.com/dms/image/D5603AQGKUXkod03p2Q/profile-displayphoto-shrink_100_100/0/1666323977932?e=1714003200&v=beta&t=RFE_kGI3bJYHmdJ33Xt51IeeHfuj2-YdOJDgpxj-fMw" loading="eager" alt="Mario Foto"/>
+		<SectionContainer class=" sm:py-0" >
+			<Image class="rounded-full mx-auto lg:size-24 lg:ml-8" width="86" height="86" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.7p_dP6-0vWarCeVnaxdrCwHaHa%26pid%3DApi&f=1&ipt=78721f705c004f87f5b4fda1c30885f1c9299408f090d0f76034dc58c812c350&ipo=images" loading="eager" alt="Mario Foto"/>
 			<h1 
 				class="flex flex-col lg:flex-row items-center
-					text-xl lg:text-5xl text-balance font-bold 
-					pb-10
+					text-xl lg:text-5xl text-balance text-center font-bold 
+					pt-4 pb-8
 					gap-y-2 lg:gap-y-0
 					"
 			>
-					quepa sopa drinos, soy Mario Chico✌🏿
+					quepa sopa drinos, soy Rasta Panda✌🏿
 				<a 
-					href="https://www.linkedin.com/mariochico" 
+					href="https://www.linkedin.com/in/williamhgates/" 
 					target="_blank" 
 					rel="noopener" 
 					class="flex items-center justify-center">
 					<Badge >Puesto pa los madrazos </Badge>
 				</a>
 			</h1>
-			<h2 class="text-2xl text-wrap opacity-75">+4 años de experiencia. Desarrollador Web y Calistenico. De Villahermosa, México. Especializado en frontlever y en andar bien pinche activo para lo que se ofrezca</h2>
-			<nav class="flex gap-x-3 mt-7">
-				<SocialContact href="https://www.linkedin.com">
+			<h2 class="text-xl text-center md:text-2xl text-balance 
+						opacity-75"
+			>
+			+4 años de experiencia. Desarrollador Web y Maestro Kung Fu. De Tlaxcala, México. Especializado en taichi y en animaciones CSS</h2>
+			<nav class="flex gap-x-3 mt-7 justify-center">
+				<SocialContact href="https://www.linkedin.com/in/williamhgates/">
 					<Linkedin class="size-6" />
 					Linkedin
 				</SocialContact>
-				<SocialContact href="https://github.com">
+				<SocialContact href="https://github.com/torvalds">
 					<Github class="size-6"/>
 					Github
 				</SocialContact>
 			</nav>
 		</SectionContainer>
 		<SectionContainer id="experiencia">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-2 items-center"><Briefcase />Experiencia Laboral</h2>               
+			<h2 class="text-3xl font-semibold mb-6 ml-1 flex gap-x-2 items-center"><Briefcase />Experiencia Laboral</h2>               
 			<Experience />
+		</SectionContainer>
+		<SectionContainer id="proyectos">
+			<Projects />
 		</SectionContainer>
 	</main>
 </Layout>

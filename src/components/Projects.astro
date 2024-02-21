@@ -1,0 +1,104 @@
+---
+import { Image } from "astro:assets"
+import Html from "./icons/Html.astro";
+import Css from "./icons/Css.astro";
+import Javascript from "./icons/Javascript.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import Vite from "./icons/Vite.astro";
+import Stripe from "./icons/Stripe.astro";
+import Framer from "./icons/Framer.astro";
+import Iconastro from "./icons/Iconastro.astro";
+import Iconreact from "./icons/Iconreact.astro";
+
+const TAGS = {
+  HTML: {
+    name: "HTML",
+    class: "bg-white text-[#e34f26]",
+    icon: Html
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-gradient-to-tr from-[#0c73b8] to-[#299ed5] text-white",
+    icon: Css
+  },
+  JS: {
+    name: "Javascript",
+    class: "bg-gradient-to-r from-[#f0db4f] to-[#404e42]",
+    icon: Javascript
+  },
+  ASTRO: {
+    name: "Astro",
+    class: "",
+    icon: Iconastro
+  },
+  REACT: {
+    name: "React",
+    class: "",
+    icon: Iconreact
+  },
+  TAILWIND: {
+    name: "Tailwind",
+    class: "",
+    icon: Tailwind
+  },
+  VITE: {
+    name: "Vite",
+    class: "",
+    icon: Vite
+  },
+  STRIPE: {
+    name: "Stripe",
+    class: "",
+    icon: Stripe
+  },
+  FRAMER: {
+    name: "Framer",
+    class: "",
+    icon: Framer
+  },
+}
+
+const PROJECTS = [
+{
+  "title": "Landing Page",
+  "description": "Minimalista y receptivo creado con Astro, y Tailwind. El sitio web presenta un diseño elegante y moderno, con una navegación fluida y una carga rápida.",
+  "image": "https://images.pexels.com/photos/7195534/pexels-photo-7195534.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "link": "http://www.lasentravel.com.mx/",
+  "tags": [TAGS.ASTRO, TAGS.TAILWIND]
+},
+{
+  "title": "Tienda online",
+  "description": "Construida con React, Vite, y Stripe. La tienda ofrece una experiencia de compra fluida y segura, con una amplia gama de productos y opciones de pago.",
+  "image": "https://images.pexels.com/photos/6550721/pexels-photo-6550721.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "link": "https://www.amazon.com.mx/",
+  "tags": [TAGS.REACT, TAGS.VITE, TAGS.STRIPE]
+},
+{
+  "title": "Portafolio de diseño",
+  "description": "Interactivo creado con HTML, CSS, JS y Framer Motion. El portafolio presenta una interfaz de usuario elegante y atractiva, con una amplia selección de proyectos de diseño.",
+  "image": "https://images.pexels.com/photos/15034731/pexels-photo-15034731/free-photo-of-ornamented-dome-in-cathedral.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "link": "https://www.lukew.com/",
+  "tags": [ TAGS.HTML, TAGS.CSS, TAGS.JS, TAGS.FRAMER]
+}
+]
+---
+
+{
+  PROJECTS.map((project) => (
+    <article class="flex flex-col justify-center items-center mb-8">
+      <h1 class=" font-bold text-2xl text-wrap">{project.title}</h1>  
+      <p class="text-pretty">{project.description}</p>
+      <ul class=" mb-3 flex flex-row  gap-x-3">
+        {project.tags.map((tag) => (
+          <li>
+            <span class={` ${tag.class} rounded-full py-1 px-2 flex gap-x-1 font-bold text-xs`}>
+              <tag.icon class=" size-4"/>
+              {tag.name}
+            </span>
+          </li>
+        ))}  
+      </ul>
+      <Image src={`${project.image}`}  width="6016 " height="4016" loading="lazy" alt="Mario Foto"/>
+    </article>
+  ))
+}
